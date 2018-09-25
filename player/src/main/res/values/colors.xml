@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="skin_common_widget">#ff2299ed</color>
+    <color name="skin_basic_disable_widget">#4c666666</color>
+    <color name="skin_primary_disable_text">#4c000000</color>
+
+    <color name="skin_primary_text">#ff000000</color>
+    <color name="skin_secondary_text">#ff888888</color>
+    <color name="skin_line">#14000000</color>
+    <color name="skin_headline_text">#ff1e88d4</color>
+    <color name="skin_bold_line">#0f333333</color>
+    <color name="rh">#ffffffff</color>
+</resources>

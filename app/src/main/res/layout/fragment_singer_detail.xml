@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kugou.view.ui.fragment.netmusic.singer.detail.DetailViewModel" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_intr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@{viewModel.intro}"
+                    android:textColor="#000"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="庄心妍（Ada），1993年1月9日出生于广东省汕尾市，内地女歌手。\n2012年10月29日，发行首支单曲《一万个舍不得》。2013年1月15日，荣获酷狗繁星网新声代歌唱比赛第二名，2013年3月13日，在酷狗音乐独家发行个人原创专辑《一万个舍不得》，2013年5月3日，发行单曲《心有所爱》，2013年6月13日，发行单曲《以后的以后》。\n2015年11月8日，在沈阳铁西体育馆举办了自己的第一场“甜妍蜜语”演唱会。2016年1月5日，在河北体育馆举办了演唱会。2016年4月21日，酷狗首发数字专辑《做最好的我》。2016年10月7日发行第十张原创专辑《Touch Of Love》，包含《孤单坠爱》、《错误的邂逅》等六首主打歌曲" />
+
+                <TextView
+                    android:id="@+id/tv_link_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:drawableEnd="@drawable/btn_enter_arraw"
+                    android:drawableRight="@drawable/btn_enter_arraw"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:text="完整歌手资料"
+                    android:textColor="@color/theme"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_intr" />
+
+                <ImageView
+                    android:id="@+id/view_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#ddd"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_link_detail" />
+
+                <TextView
+                    android:id="@+id/tv_similarity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:text="相似歌手"
+                    android:textColor="@color/theme"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_line" />
+
+                <ImageView
+                    android:id="@+id/view_line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#ddd"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_similarity" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec_similarity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/view_line2" />
+            </androidx.constraintlayout.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+</layout>

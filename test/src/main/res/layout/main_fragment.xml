@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddd">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="选择期数"
+        android:textColor="@color/skin_primary_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/rec_year"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="0.5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toTopOf="@+id/tv_sure"
+        app:layout_constraintEnd_toStartOf="@+id/rec_week"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        tools:listitem="@tools:sample/date/day_of_week" />
+
+    <ListView
+        android:id="@+id/rec_week"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="0.5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toTopOf="@+id/tv_sure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rec_year"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        tools:listitem="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/tv_sure"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="0.5dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/skin_common_widget"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/skin_primary_text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

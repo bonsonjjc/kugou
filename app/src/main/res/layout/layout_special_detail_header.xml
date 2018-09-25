@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b2868385"
+    android:minHeight="245dp">
+
+
+    <com.kugou.view.widget.SinkImageView
+        android:id="@+id/img_cover"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ico_rank_default"
+        app:layout_constraintBottom_toTopOf="@+id/tv_like"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/img_create"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_create_time"
+        app:layout_constraintStart_toEndOf="@+id/img_cover"
+        app:layout_constraintTop_toTopOf="@+id/img_cover"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ico_singer_default" />
+
+    <TextView
+        android:id="@+id/tv_creater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:maxLength="8"
+        tools:text="简单爱"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_create"
+        app:layout_constraintStart_toEndOf="@+id/img_create"
+        app:layout_constraintTop_toTopOf="@+id/img_create" />
+
+    <TextView
+        android:id="@+id/tv_fllow"
+        android:layout_width="50dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/ratangle_border_light"
+        android:gravity="center"
+        android:text="关注"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_creater"
+        app:layout_constraintStart_toEndOf="@+id/tv_creater"
+        app:layout_constraintTop_toTopOf="@+id/tv_creater" />
+
+    <TextView
+        android:id="@+id/tv_create_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        tools:text="创建时间 2018-04-12"
+        android:textColor="#e2e1e1"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_chat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/img_create"
+        app:layout_constraintTop_toBottomOf="@+id/img_create" />
+
+    <TextView
+        android:id="@+id/tv_like"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawableTop="@drawable/btn_like_white"
+        android:drawablePadding="2dp"
+        android:gravity="center_horizontal"
+        android:text="0"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_chat"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_chat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawableTop="@drawable/ico_comment_default"
+        android:drawablePadding="2dp"
+        android:gravity="center_horizontal"
+        android:text="评论"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_play_count"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_like" />
+
+    <TextView
+        android:id="@+id/tv_play_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawableTop="@drawable/btn_play_small"
+        android:drawablePadding="2dp"
+        android:gravity="center_horizontal"
+        android:text="播放"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_download"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_chat" />
+
+    <TextView
+        android:id="@+id/tv_download"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawableTop="@drawable/btn_download"
+        android:drawablePadding="2dp"
+        android:gravity="center_horizontal"
+        android:text="下载"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_play_count" />
+</androidx.constraintlayout.ConstraintLayout>

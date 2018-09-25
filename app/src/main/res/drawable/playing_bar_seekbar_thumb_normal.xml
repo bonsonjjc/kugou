@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/seekbar_foreground">
+        <shape android:shape="oval">
+            <solid android:color="#01000000" />
+            <size
+                android:width="16dp"
+                android:height="16dp" />
+        </shape>
+    </item>
+
+    <item>
+        <inset
+            android:insetBottom="4dp"
+            android:insetLeft="4dp"
+            android:insetRight="4dp"
+            android:insetTop="4dp"
+            android:visible="true">
+            <shape android:shape="oval">
+                <solid android:color="@color/theme" />
+            </shape>
+        </inset>
+    </item>
+</layer-list>

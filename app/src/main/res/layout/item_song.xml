@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.kugou.audio.model.Music" />
+    </data>
+
+    <androidx.constraintlayout.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_item">
+
+        <View
+            android:id="@+id/view_play"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:background="@color/theme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/btn_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:button="@drawable/btn_add_music"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_rank"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ico_rank_first"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rank"
+            app:layout_constraintEnd_toEndOf="@+id/tv_rank"
+            app:layout_constraintStart_toStartOf="@+id/tv_rank"
+            app:layout_constraintTop_toTopOf="@+id/tv_rank" />
+
+        <TextView
+            android:id="@+id/tv_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:minWidth="25dp"
+            android:textColor="#000"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_select"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="100" />
+
+        <androidx.constraintlayout.Group
+            android:id="@+id/group_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tv_rank,img_rank" />
+
+        <TextView
+            android:id="@+id/tv_song_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="8dp"
+            android:singleLine="true"
+            android:text="@{com.kugou.utils.KgUtils.songs(data.filename,data.remark).first}"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_song_singer"
+            app:layout_constraintEnd_toStartOf="@+id/btn_menu"
+            app:layout_constraintStart_toEndOf="@+id/tv_rank"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_goneMarginLeft="16dp"
+            app:layout_goneMarginStart="16dp"
+            tools:text="没开始恐" />
+
+        <TextView
+            android:id="@+id/tv_song_singer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@{com.kugou.utils.KgUtils.songs(data.filename,data.remark).second}"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_rank_single_sales"
+            app:layout_constraintEnd_toEndOf="@+id/tv_song_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_song_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_song_title"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_goneMarginBottom="8dp"
+            tools:text="诶健康减肥的斯洛" />
+
+        <TextView
+            android:id="@+id/tv_rank_single_sales"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text='@{"销量：" + com.kugou.utils.KgUtils.numberTo(data.buy_count)}'
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_song_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_song_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_song_singer"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="销量： 2.52万" />
+
+        <ImageView
+            android:id="@+id/btn_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/btn_music_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="0.1dp"
+            android:background="@color/skin_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_song_title" />
+
+
+    </androidx.constraintlayout.ConstraintLayout>
+
+</layout>

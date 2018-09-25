@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.kugou.repository.netmusic.album.Album" />
+    </data>
+
+    <androidx.constraintlayout.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_item">
+
+        <com.kugou.view.widget.SinkImageView
+            android:id="@+id/img_album_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/ico_album_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_album"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_album"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:placeholder="@{@drawable/ico_rank_default}"
+            android:src="@drawable/ico_rank_default"
+            android:url="@{data.imgurl}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_border_color="#ddd"
+            app:riv_border_width="0.2dp" />
+
+        <TextView
+            android:id="@+id/tv_album_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:singleLine="true"
+            android:text="@{data.albumname}"
+            android:textColor="#000"
+            app:layout_constraintBottom_toTopOf="@+id/tv_album_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_album_bg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="天音" />
+
+        <TextView
+            android:id="@+id/tv_album_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@{com.kugou.utils.KgUtils.date(data.publishtime)}"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_album_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_album_name"
+            tools:text="2018-02-12" />
+
+        <TextView
+            android:id="@+id/tv_album_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text='@{data.songcount+"首"}'
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_album_time"
+            app:layout_constraintTop_toTopOf="@+id/tv_album_time"
+            tools:text="6首" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="0.1dp"
+            android:background="@color/skin_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_album_time" />
+    </androidx.constraintlayout.ConstraintLayout>
+</layout>

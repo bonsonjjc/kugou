@@ -1,0 +1,33 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.0 rc2'
+
+    defaultConfig {
+        minSdkVersion 15
+        versionCode 4
+        versionName "1.0.1"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    def appcompat = '1.0.0-alpha3'
+    api "com.google.android.material:material:$appcompat"
+    api "androidx.recyclerview:recyclerview:$appcompat"
+    api "androidx.cardview:cardview:$appcompat"
+}
+

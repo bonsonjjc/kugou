@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_gravity="bottom|end">
+
+    <com.kugou.view.widget.KGSeekBar
+        android:id="@+id/sb_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="8dp"
+        android:background="#00000000"
+        android:maxHeight="1.5dp"
+        android:minHeight="1.5dp"
+        android:paddingEnd="10dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="10dp"
+        android:paddingStart="6dp"
+        android:progressDrawable="@drawable/playing_bar_seekbar_progress"
+        android:splitTrack="false"
+        android:thumb="@drawable/playing_bar_seekbar_thumb"
+        android:thumbOffset="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_playing_bar_song_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.kugou.view.widget.MarqueeTextView
+        android:id="@+id/tv_playing_bar_song_name"
+        style="@style/MarqueeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:singleLine="true"
+        android:text="酷狗音乐"
+        android:textColor="#000"
+        app:layout_constraintBottom_toTopOf="@+id/tv_playin_bar_singer"
+        app:layout_constraintEnd_toEndOf="@+id/tv_playin_bar_singer"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="酷狗音乐" />
+
+    <com.kugou.view.widget.MarqueeTextView
+        android:id="@+id/tv_playin_bar_singer"
+        style="@style/MarqueeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:singleLine="true"
+        android:text="就是歌多"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_playing_bar_play"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="就是歌多" />
+
+    <com.kugou.view.widget.SinkImageView
+        android:id="@+id/btn_playing_bar_play"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@null"
+        android:src="@drawable/playing_bar_play"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_playin_bar_next"
+        app:layout_constraintEnd_toStartOf="@+id/btn_playin_bar_next"
+        app:layout_constraintTop_toTopOf="@+id/btn_playin_bar_next" />
+
+    <com.kugou.view.widget.SinkImageView
+        android:id="@+id/btn_playin_bar_next"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@null"
+        android:src="@drawable/playing_bar_next"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_playing_bar_playlist"
+        app:layout_constraintEnd_toStartOf="@+id/btn_playing_bar_playlist"
+        app:layout_constraintTop_toTopOf="@+id/btn_playing_bar_playlist" />
+
+    <com.kugou.view.widget.SinkImageView
+        android:id="@+id/btn_playing_bar_playlist"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@null"
+        android:src="@drawable/playing_bar_playlist_queue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_playing_bar_song_name" />
+</androidx.constraintlayout.ConstraintLayout>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.ConstraintLayout
+        android:id="@+id/special_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="15sp"
+        android:paddingRight="15sp">
+
+        <TextView
+            android:id="@+id/tv_c_m"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_singer_special"
+            android:gravity="center"
+            android:tag="0"
+            android:text="华语男歌手"
+            android:textColor="@color/btn_special_text"
+            app:layout_constraintEnd_toStartOf="@+id/guideline9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_e_m"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_singer_special"
+            android:gravity="center"
+            android:tag="3"
+            android:text="欧美男歌手"
+            android:textColor="@color/btn_special_text"
+            app:layout_constraintEnd_toStartOf="@+id/guideline9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_c_m" />
+
+        <TextView
+            android:id="@+id/tv_k_m"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_singer_special"
+            android:gravity="center"
+            android:tag="6"
+            android:text="韩国男歌手"
+            android:textColor="@color/btn_special_text"
+            app:layout_constraintEnd_toStartOf="@+id/guideline9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_e_m" />
+
+        <TextView
+            android:id="@+id/tv_j_m"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_singer_special"
+            android:gravity="center"
+            android:tag="9"
+            android:text="日本男歌手"
+            android:textColor="@color/btn_special_text"
+            app:layout_constraintEnd_toStartOf="@+id/guideline9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_k_m" />
+
+        <TextView
+            android:id="@+id/tv_c_f"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_singer_special"
+            android:gravity="center"
+            android:tag="1"
+            android:text="华语女歌手"
+            android:textColor="@color/btn_special_text"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintStart_toStartOf="@+id/guideline9"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_e_f"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_singer_special"
+            android:gravity="center"
+            android:tag="4"
+            android:text="欧美女歌手"
+            android:textColor="@color/btn_special_text"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintStart_toStartOf="@+id/guideline9"
+            app:layout_constraintTop_toBottomOf="@+id/tv_c_f" />
+
+        <TextView
+            android:id="@+id/tv_k_f"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_singer_special"
+            android:gravity="center"
+            android:tag="7"
+            android:text="韩国女歌手"
+            android:textColor="@color/btn_special_text"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintStart_toStartOf="@+id/guideline9"
+            app:layout_constraintTop_toBottomOf="@+id/tv_e_f" />
+
+        <TextView
+            android:id="@+id/tv_j_f"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_singer_special"
+            android:gravity="center"
+            android:tag="10"
+            android:text="日本女歌手"
+            android:textColor="@color/btn_special_text"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintStart_toStartOf="@+id/guideline9"
+            app:layout_constraintTop_toBottomOf="@+id/tv_k_f" />
+
+        <TextView
+            android:id="@+id/tv_c_c"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_singer_special"
+            android:gravity="center"
+            android:tag="2"
+            android:text="华语女组合"
+            android:textColor="@color/btn_special_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline10"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_e_c"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_singer_special"
+            android:gravity="center"
+            android:tag="5"
+            android:text="欧美组合"
+            android:textColor="@color/btn_special_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline10"
+            app:layout_constraintTop_toBottomOf="@+id/tv_c_f" />
+
+        <TextView
+            android:id="@+id/tv_k_c"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_singer_special"
+            android:gravity="center"
+            android:tag="8"
+            android:text="韩国组合"
+            android:textColor="@color/btn_special_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline10"
+            app:layout_constraintTop_toBottomOf="@+id/tv_e_f" />
+
+        <TextView
+            android:id="@+id/tv_j_c"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_singer_special"
+            android:gravity="center"
+            android:tag="11"
+            android:text="日本组合"
+            android:textColor="@color/btn_special_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline10"
+            app:layout_constraintTop_toBottomOf="@+id/tv_k_f" />
+
+        <TextView
+            android:id="@+id/tv_e_a"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_singer_special"
+            android:gravity="center"
+            android:tag="12"
+            android:text="其他歌手"
+            android:textColor="@color/btn_special_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_j_m" />
+
+        <TextView
+            android:id="@+id/tv_k_o"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_singer_special"
+            android:gravity="center"
+            android:tag="13"
+            android:text="原创音乐人"
+            android:textColor="@color/btn_special_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline11"
+            app:layout_constraintTop_toBottomOf="@+id/tv_j_c" />
+
+        <androidx.constraintlayout.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <androidx.constraintlayout.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <androidx.constraintlayout.Guideline
+            android:id="@+id/guideline11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+    </androidx.constraintlayout.ConstraintLayout>
+
+    <View
+        android:id="@+id/view_out"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5ebcbbbb"
+        app:layout_constraintTop_toBottomOf="@+id/tv_e_a" />
+
+</LinearLayout>
+

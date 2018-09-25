@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="playing_bar_height" type="integer">70dp</dimen>
+    <dimen name="playing_bar_padding" type="integer">58dp</dimen>
+    <dimen name="toolbar_height" type="integer">45dp</dimen>
+</resources>

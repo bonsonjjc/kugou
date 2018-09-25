@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.kugou.repository.mv.Video" />
+    </data>
+
+    <androidx.constraintlayout.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_item">
+
+        <com.kugou.view.widget.SinkImageView
+            android:id="@+id/img_mv_pick"
+            android:layout_width="130dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:placeholder="@{@drawable/ico_mv_default}"
+            android:scaleType="fitXY"
+            android:src="@drawable/ico_mv_default"
+            android:url="@{data.imgurl}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_mv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:maxLines="2"
+            android:text="@{data.filename}"
+            android:textColor="#000"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_mv_singer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_mv_pick"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="哑巴哑巴哑巴哑巴哑巴哑巴哑巴哑巴哑巴哑巴哑巴哑巴哑巴哑" />
+
+        <TextView
+            android:id="@+id/tv_mv_singer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{data.singername}"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_mv_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_mv_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mv_name"
+            tools:text="东方广场" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/skin_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_mv_pick" />
+    </androidx.constraintlayout.ConstraintLayout>
+
+</layout>

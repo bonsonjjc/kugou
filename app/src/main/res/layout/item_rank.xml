@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.kugou.repository.netmusic.rank.RankTag" />
+    </data>
+
+    <androidx.constraintlayout.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_item">
+
+        <com.kugou.view.widget.SinkImageView
+            android:id="@+id/img_icon"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:placeholder="@{@drawable/ico_rank_default}"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ico_rank_default"
+            android:url="@{data.imgurl}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@{data.update_frequency}"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="周四" />
+
+        <ImageView
+            android:id="@+id/img_play"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:clickable="true"
+            android:src="@drawable/btn_rank_special_play"
+            app:layout_constraintBottom_toBottomOf="@+id/img_icon"
+            app:layout_constraintEnd_toEndOf="@+id/img_icon" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@{data.rankname}"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/img_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="酷狗飙升榜" />
+
+        <ImageView
+            android:id="@+id/img_first"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ico_rank_first"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_first"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:singleLine="true"
+            android:text="@{data.songinfo[0].songname}"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_first"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toEndOf="@+id/img_first"
+            app:layout_constraintTop_toTopOf="@+id/img_first"
+            tools:text="管鹅坊-飞机上了" />
+
+        <ImageView
+            android:id="@+id/img_second"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ico_rank_second"
+            app:layout_constraintStart_toEndOf="@+id/img_icon"
+            app:layout_constraintTop_toBottomOf="@+id/img_first" />
+
+        <TextView
+            android:id="@+id/tv_second"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:singleLine="true"
+            android:text="@{data.songinfo[1].songname}"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_second"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toEndOf="@+id/img_second"
+            app:layout_constraintTop_toTopOf="@+id/img_second"
+            tools:text="历史课-日交付啊放" />
+
+        <ImageView
+            android:id="@+id/img_thrid"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ico_rank_third"
+            android:text="3"
+            app:layout_constraintStart_toEndOf="@+id/img_icon"
+            app:layout_constraintTop_toBottomOf="@+id/img_second" />
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:singleLine="true"
+            android:text="@{data.songinfo[2].songname}"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_thrid"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toEndOf="@+id/img_thrid"
+            app:layout_constraintTop_toTopOf="@+id/img_thrid"
+            tools:text="管鹅坊-诶借款发生了" />
+
+        <View
+            android:id="@+id/view_bootom_line"
+            android:layout_width="0dp"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/skin_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_icon" />
+
+        <androidx.constraintlayout.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+    </androidx.constraintlayout.ConstraintLayout>
+</layout>
